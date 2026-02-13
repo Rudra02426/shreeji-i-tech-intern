@@ -1,0 +1,216 @@
+<@1467735274309292212> 
+
+## 🟢 1. User-Defined Function (UDF) Tasks
+
+### Task 1: Simple Function
+
+Create a function that:
+
+* takes two numbers
+* returns their sum
+
+---
+
+### Task 2: Even/Odd Function
+
+Create a function that:
+
+* accepts a number
+* returns whether it is even or odd
+
+---
+
+### Task 3: Function with Default Argument
+
+Create a function that:
+
+* takes `name` and `country="India"`
+* prints a greeting message
+
+---
+
+### Task 4: Function with Return Value
+
+Create a function that:
+
+* takes a list of marks
+* returns total and average
+
+---
+
+### Task 5: Function with Multiple Arguments
+
+Create a function that:
+
+* accepts variable number of arguments
+* returns their sum
+
+---
+
+## 🟡 2. Built-in Function Tasks
+
+### Task 6: Built-in Math Functions
+
+Using built-in functions:
+
+* find max and min from a list
+* calculate sum
+* calculate length
+
+---
+
+### Task 7: Type Conversion
+
+Use built-in functions to convert:
+
+* string → int
+* int → float
+* list → tuple
+
+---
+
+### Task 8: Sorting Task
+
+Sort a list:
+
+* ascending
+* descending
+  using built-in functions
+
+---
+
+### Task 9: `map()` Function
+
+Use `map()` to:
+
+* square all elements in a list
+
+---
+
+### Task 10: `filter()` Function
+
+Use `filter()` to:
+
+* get even numbers from a list
+
+---
+
+## 🔵 3. Lambda Function Tasks
+
+### Task 11: Lambda for Addition
+
+Write a lambda function to:
+
+* add two numbers
+
+---
+
+### Task 12: Lambda with Conditional
+
+Create a lambda function to:
+
+* check max of two numbers
+
+---
+
+### Task 13: Lambda with `map()`
+
+Use lambda with `map()` to:
+
+* convert list elements to square
+
+---
+
+### Task 14: Lambda with `filter()`
+
+Use lambda with `filter()` to:
+
+* extract numbers greater than 50
+
+---
+
+### Task 15: Lambda Sorting
+
+Sort a list of tuples based on:
+
+* second value
+  using lambda
+
+---
+
+## 🔴 4. Recursion Tasks
+
+### Task 16: Factorial using Recursion
+
+Write a recursive function to:
+
+* calculate factorial
+
+---
+
+### Task 17: Sum of Digits
+
+Find sum of digits of a number using recursion.
+
+---
+
+### Task 18: Fibonacci using Recursion
+
+Print Fibonacci series using recursion.
+
+---
+
+### Task 19: Reverse String
+
+Reverse a string using recursion.
+
+---
+
+### Task 20: Power of Number
+
+Calculate `x^n` using recursion.
+
+---
+
+## 🔥 5. Mixed Logic Tasks (Interview Level)
+
+### Task 21: Function vs Lambda
+
+Write a normal function and lambda function for:
+
+* square of a number
+  Compare both.
+
+---
+
+### Task 22: Recursion vs Loop
+
+Write factorial using:
+
+* loop
+* recursion
+  Explain difference.
+
+---
+
+### Task 23: Custom Built-in Behavior
+
+Create a function that works like:
+
+* `len()` function
+
+---
+
+### Task 24: Nested Function
+
+Create a function inside another function and:
+
+* call inner function
+
+---
+
+### Task 25: Real-Life UDF
+
+Create a function for:
+
+* ATM withdrawal system with conditions

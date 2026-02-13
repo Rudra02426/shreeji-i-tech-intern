@@ -1,0 +1,179 @@
+##  Level 1: Basic Looping Tasks
+
+### Task 1: Print Numbers
+
+Use a loop to print numbers from:
+
+* 1 to 10
+
+---
+
+### Task 2: Even Numbers
+
+Print all even numbers between:
+
+* 1 and 20
+
+---
+
+### Task 3: Sum of Numbers
+
+Find the sum of numbers from:
+
+* 1 to N (N given by user)
+
+---
+
+### Task 4: Multiplication Table
+
+Input a number and print its table.
+
+---
+
+### Task 5: Reverse Counting
+
+Print numbers from:
+
+* 10 to 1
+
+---
+
+##  Level 2: Loop + Condition
+
+### Task 6: Odd Numbers
+
+Print all odd numbers between:
+
+* 1 and 50
+
+---
+
+### Task 7: Count Digits
+
+Input a number and count how many digits it has.
+
+---
+
+### Task 8: Factorial
+
+Find factorial of a given number using a loop.
+
+---
+
+### Task 9: Number Pattern
+
+Print:
+
+```
+1
+12
+123
+1234
+12345
+```
+
+---
+
+### Task 10: Prime Number
+
+Check whether a number is prime or not using a loop.
+
+---
+
+##  Level 3: Collection + Loop
+
+### Task 11: List Traversal
+
+Given a list:
+
+```python
+[10, 20, 30, 40, 50]
+```
+
+Print each element using a loop.
+
+---
+
+### Task 12: Sum of List Elements
+
+Find sum of all elements in a list using a loop.
+
+---
+
+### Task 13: Count Even & Odd
+
+Count how many:
+
+* even numbers
+* odd numbers
+  are present in a list.
+
+---
+
+### Task 14: Find Largest Element
+
+Find the largest number in a list **without using `max()`**.
+
+---
+
+### Task 15: Search Element
+
+Search a given number in a list and print:
+
+* Found
+* Not Found
+
+---
+
+##  Level 4: Nested Loops & Logic
+
+### Task 16: Star Pattern
+
+Print:
+
+```
+*
+**
+***
+****
+*****
+```
+
+---
+
+### Task 17: Number Pyramid
+
+```
+1
+22
+333
+4444
+55555
+```
+
+---
+
+### Task 18: Matrix Print
+
+Given a 2D list:
+
+```python
+[[1, 2], [3, 4], [5, 6]]
+```
+
+Print all elements row-wise.
+
+---
+
+### Task 19: Break & Continue
+
+Print numbers from 1 to 10:
+
+* Skip number 5
+* Stop loop when number is 8
+
+---
+
+### Task 20: Fibonacci Series
+
+Print Fibonacci series up to N terms.
