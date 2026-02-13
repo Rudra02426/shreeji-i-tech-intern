@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+{% if user.is_authenticated %}
+    <p> welcome, {{ request.user.username }}<br>
+    </p>
+    <a href="{% url 'user_logout' %}"> Logout </a>
+{% else %}
+    <a href="{% url 'user_login' %}"> Login </a>
+{% endif %}
+<h1>Student List</h1>
+<br>
+<a href="{% url 'dashboard' %}">DASHBOARD</a>
+
+<a href="{% url 'add_student' %}" class="btn add-btn">Add Student<br></a>
+{% if messages %}
+    {% for message in messages %}
+        <p id="message" style="color: red;">
+            {{ message }}
+        </p>
+    {% endfor %}
+{% endif %}
+<br>
+<form method="GET">
+    <input type="text" name="search" placeholder="search student name">
+    <button type="submit">SUBMIT</button>
+</form>
+
+<br>
+        <table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Marks</th>
+        <th>image</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for student in page_obj %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.marks }}</td>
+        <td>
+            {% if student.profile_image %}
+                <img src="{{ student.profile_image.url }}" width="80">
+            {% else %}
+                No Image
+            {% endif %}
+        </td>
+        <td>
+            <a href="{% url 'edit_student' student.id %}" class="btn edit-btn">Edit</a>
+            <a href="{% url 'delete_student' student.id %}" class="btn delete-btn">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="5">No students found</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div>
+    {% if page_obj.has_previous %}
+        <a href="?page=1">First</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+</div>
+
+
+<script>
+    setTimeout(function() {
+        var msg = document.getElementById("message");
+        if (msg) {
+            msg.style.display = "none";
+        }
+    }, 1000); 
+</script>
+
+</body>
+</html>

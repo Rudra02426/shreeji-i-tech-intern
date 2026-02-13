@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dashboard</title>
+    
+    </head>
+    <body>
+        <h1> student dashboard</h1>
+        <div>
+            <h2>
+                Total students : {{ total_students }}
+            </h2><br>
+            <h2>
+                passed students : {{ passed_students }}
+            </h2><br>
+            <h2>
+                failed students : {{ failed_students }}
+            </h2><br>
+            <a href="{% url 'student_list' %}"> GO TO STUDENT LIST</a>
+
+        </div>
+    </body>
+</html>
