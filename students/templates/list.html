@@ -9,7 +9,7 @@
 {% if user.is_authenticated %}
     <p> welcome, {{ request.user.username }}<br>
     </p>
-    <a href="{% url 'user_logout' %}"> Logout </a>
+    <a href="{% url 'portal_logout' %}"> Logout </a>
 {% else %}
     <a href="{% url 'user_login' %}"> Login </a>
 {% endif %}
@@ -36,8 +36,12 @@
     <tr>
         <th>Name</th>
         <th>Email</th>
+        <th>Gender</th>
         <th>Age</th>
         <th>Marks</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>course</th>
         <th>image</th>
         <th>Actions</th>
     </tr>
@@ -46,8 +50,12 @@
     <tr>
         <td>{{ student.name }}</td>
         <td>{{ student.email }}</td>
+        <td>{{ student.gender }}</td>
         <td>{{ student.age }}</td>
         <td>{{ student.marks }}</td>
+        <td>{{ student.phone }}</td>
+        <td>{{ student.address }}</td>
+        <td>{{ student.course }}</td>
         <td>
             {% if student.profile_image %}
                 <img src="{{ student.profile_image.url }}" width="80">
@@ -79,6 +87,13 @@
         <a href="?page={{ page_obj.next_page_number }}">Next</a>
         <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
     {% endif %}
+</div>
+
+<div>
+    <a href="{% url 'portal_home' %}">
+        back to student list 
+    </a>
+
 </div>
 
 

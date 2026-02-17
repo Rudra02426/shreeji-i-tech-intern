@@ -17,17 +17,27 @@ from django.db.models import Count
 @login_required
 def student_list(request):
     students = Student.objects.all()
-    paginator = Paginator(students , 5)
-    page_number= request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    search_query= request.GET.get('search')
+
+    search_query = request.GET.get('search')
     if search_query:
-        students = students.filter(name__icontains = search_query) 
-    return render(request, 'list.html', 
-                  {
-                      'students': students,
-                      'page_obj' : page_obj
-                  })
+        students = students.filter(name__icontains=search_query)
+
+    paginator = Paginator(students, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    total_students = Student.objects.count()
+    passed_students = Student.objects.filter(marks__gte=35).count()
+    failed_students = Student.objects.filter(marks__lt=35).count()
+
+    return render(request, 'list.html', {
+        'page_obj': page_obj,
+        'students': page_obj,
+        'total_students': total_students,
+        'passed_students': passed_students,
+        'failed_students': failed_students,
+    })
+
 
 
 @login_required
@@ -45,8 +55,6 @@ def add_student(request):
 
 @login_required
 def edit_student(request, id):
-    if not request.user.is_superuser:
-        return HttpResponse("only admin can edits student")
     student = get_object_or_404(Student, id=id)
 
     if request.method == "POST":
@@ -54,7 +62,7 @@ def edit_student(request, id):
         if form.is_valid():
             form.save()
             messages.success(request, "student updated")
-            return redirect('student_list')
+            return redirect('student_profile')
     else:
         form = StudentForm(instance=student)
 

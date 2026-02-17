@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
-        fields = ['name', 'email', 'age', 'marks', 'profile_image']
+        fields = ['name', 'email', 'age', 'marks', 'profile_image','gender', 'phone', 'address', 'course']
 
     def clean_age(self):
         age = self.cleaned_data.get('age')
@@ -17,4 +17,4 @@ class RegisterForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     class Meta:
         model = User
-        fields =['username', 'email', 'password']
+        fields =['username',  'password']

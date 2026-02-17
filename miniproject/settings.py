@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'students',
     'rest_framework',
+    'student_portal'
 ]
 
 MIDDLEWARE = [
@@ -124,6 +125,8 @@ STATIC_URL = 'static/'
 LOGIN_URL = 'user_login'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+LOGIN_REDIRECT_URL = '/portal/'
+LOGOUT_REDIRECT_URL = 'portal_home'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
