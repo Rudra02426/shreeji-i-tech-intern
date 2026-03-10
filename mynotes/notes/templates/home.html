@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Notes</title>
+</head>
+<body bgcolor="skyblue" >
+        <h2 class="text-4xl font-bold mb-10 text-center">
+            MY NOTES 
+        </h2>
+<table class="w-full text-center ">
+
+<thead>
+    <tr>
+        
+        <th>Title</th>
+        <th>Content</th>
+        <th>created at</th>
+        
+    </tr>
+
+</thead>
+
+{% for note in notes %}
+    <div >
+        <tr>
+            <td>{{ note.title }}</td>
+            <td>{{ note.content }}</td>
+            <td>{{ note.created_at}}</td>
+        </tr>
+    </div>
+{% endfor %}
+</table>
+</body>
+</html>

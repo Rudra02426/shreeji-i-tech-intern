@@ -1,0 +1,200 @@
+Basic Django Questions
+
+1. What is Django?
+-> django is a python framework that follows MVT(Model,View,Template) architecture .
+
+
+2. What language is Django written in?
+-> Python
+
+
+3.What type of framework is Django?
+-> web application based framework 
+
+4.What is the MVT architecture in Django?
+-> MVT - model, view, template .
+	django follows mvt architecture for database handle with model, manage logic inside views for perfect view, 
+	and template for ui.
+
+5.Difference between MVT and MVC.
+->	mvt- model, view, template - django use mvt architecture for ui with templates
+					its display logic with presentation	
+	mvc- model , view, control - java...etc uses this 
+					its not use ui for presentation
+
+
+6.What is a Django project?
+->django project is a  complate web cofig that used for settings.py and wsgi.py that helps for web application.
+
+7.What is a Django app?
+-> django app is used to functions, models and urls for runs specific task 
+
+
+8.Command to create a Django project.
+-> djanfo-admin createproject myproject
+
+
+9.Command to create a Django app.
+->1st we want to open cmd with project path then,
+	D:\myproject> python manage.py startapp projectapp
+
+10..What is manage.py?
+-> mmanagepy is file that used to run commanads with project 
+	ex. python manage.py runserver,
+	python manage.py makemigrations etc.....
+
+
+
+ Django Structure Questions
+
+
+1. What is the purpose of settings.py?
+->setting.py is used for give app reference with project inside INSTALLED APPS,
+	used to reference of database 
+
+2.What is urls.py used for?
+-> urls.py is used to handle user url request from webiste or server instead urls.py is used to collect url request and 
+ and sent perfect response as redirecting page 
+
+3.What is views.py?
+-> view.py has app logic and functions used for business logic of app
+
+
+4.What are templates in Django?
+-> templates are .html files that used for ui 
+
+5.What are static files?
+-> static files are used for redirect static data of the website . data that is inserted by admin that never change 
+ for ex, website logo that never change so that is given static
+
+6.What is wsgi.py?
+-> wsgi. web server gateway interface is used for interface between website and database 
+
+7.What is asgi.py?
+-> asynchronize gateway interface . known but not learned 
+
+
+Models & Database Questions
+
+
+1.What is a model in Django?
+-> model are a database schema . 
+
+2.What is ORM?
+->orm- object resource mapping. django orm is used to objects for interact with database directly instead of use mysql query
+
+3.What is the difference between makemigrations and migrate?
+-> makemigrations- create migration file , django automatic create migration files from models instead use of sql qury 
+		   used with python manage.py runserver
+  migrate - use migration file to create database tables and columns. python manage.py migrate
+		it applies to the database 
+
+
+4.What is a primary key?
+->primary key is used in db for stop duplicate data insertion.
+
+5.What is ForeignKey?
+-> foreign key is used for one to many relationship . for use one table that used PK and need that same data in another 
+table then we can use same data from different table 
+
+6. What is ManyToManyField?
+-> many to many filed is used to model field in many different models with manyTOmany relationsip 
+
+
+7.What is the Django admin panel?
+-> django admin panel is a default admin side of django that is used to manage database . that created with models of the project 
+
+
+⸻
+Views & Templates Questions
+
+
+1.What is a view function?
+-> view function is used to request and response from website to webserver  
+
+2.What is the difference between render() and HttpResponse()?
+->render is used to redirect html templates
+  httpresponse is used to redirect direct raw content
+
+3.What is template inheritance?
+-> template inheritance it means is used inheritence with templates 
+one template is used to other templates base files 
+
+
+4.What are template tags?
+-> tags are used to make html template to django friendly tags 
+  ex. tags written with {% %} ( {% load static %}), for loop {{ }} ({{ for quiz in quizzes}})
+
+5.What are context variables?
+-> context variable is variables that are used in views.py function to redirect with templates 
+
+
+
+Forms & Authentication Questions
+
+
+1.What is a Django Form?
+-> django form is give functionality to use django forms 
+ forms are used with {% csrf_tokens %} 
+
+2.Difference between Form and ModelForm.
+->form is simple form that use with html template and modelform is a form for models that is used for models 
+
+3.What is Django authentication system?
+-> django authentication system are used to stop third party milicious activity on django web application
+  django gives decorator for authentication
+
+4.What is login_required decorator?
+-> @login_required is used for complesory login of authorized person of web application 
+
+5.What is User model?
+-> django gives default user model for user authentication 
+
+⸻
+
+Practical Questions (Very Common)
+
+
+1.How do you connect Django with a database?
+-> add database details in project/settings.py file 
+like engine,database name, password, host and port
+
+2.How do you add an app to a project?
+-> in project/settings.py file add app name inside INSTALLED APPS[]
+
+3.How do you register a model in admin?
+->simply add all models and then write admin.site.register(model_name)
+
+
+4.How do you create a superuser?
+-> run this linein cmd to create a superuser for django admin 
+python manage.py createsuperuser
+
+5.How do you run the Django server?
+->python manage.py runserver
+
+6.Default port of Django server?
+->'3306'
+⸻
+
+
+Intermediate Questions
+
+
+1.What is Django middleware?
+->django middleware is a layer between request and response 
+like user request home page middleware >> @login_required so redirect to login page if not logged in then home page 
+
+
+2.What is CSRF protection?
+->csrf- cross site request forgery ,csrf_token is used with forms,  used to stop third party milicious or unauthorized access in form 
+
+3.What is Django REST Framework (DRF)?
+->drf is used to use apis instead of html pages and use more functionalitieswith drf like serializer etc..
+
+4.What is pagination?
+-> pagination is used to seperate large data into pages using paginator.
+it helps to load data faster and easy to analyze
+
+5.What is session in Django?
+-> session is used to store and retrive user data on server side 
